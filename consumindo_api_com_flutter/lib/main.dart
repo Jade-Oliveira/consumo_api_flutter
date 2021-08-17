@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import 'home/dio/dio_bindings.dart';
+import 'home/dio/dio_page.dart';
 import 'home/home_page.dart';
 import 'home/http/http_bindings.dart';
 import 'home/http/http_page.dart';
@@ -24,6 +26,11 @@ class MyApp extends StatelessWidget {
               name: '/http', 
               page: () => HttpPage(),
               binding: HttpBindings(),
+            ),
+             GetPage(
+              name: '/dio', 
+              page: () => DioPage(),
+              binding: DioBindings(),
             )
           ]
         )
