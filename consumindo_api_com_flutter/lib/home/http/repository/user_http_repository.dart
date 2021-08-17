@@ -14,6 +14,6 @@ class UserHttpRepository implements IUserRepository {
     //decodifico o json para uma lista
     final List<dynamic> responseMap = json.decode(response.body);
     //transformo em uma lista de userModel, o map retornaria um iterable, mas uso o toList para transformar em lista
-    return responseMap.map<UserModel>((resp) => UserModel.fromMap(resp)).toList();
+    return responseMap.map((resp) => UserModel.fromMap(resp)).toList();
   }  
 }
